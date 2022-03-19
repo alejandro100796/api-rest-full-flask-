@@ -1,8 +1,10 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from datetime import datetime
 from database import products, setup
 
 app = Flask(__name__)
+CORS(app)
 
 setup.create_tables()
 
